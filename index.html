@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Tracker - ISS</title>
+
+    <!-- Leaflet CSS - This makes the map look right -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- Link to our own simple styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet JavaScript - This makes the map work -->
+    <!-- We must load this BEFORE our own script.js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>🛰️ International Space Station Tracker</h1>
+        <p>Track the real-time location of the ISS as it orbits Earth!</p>
+    </header>
+
+    <main>
+        <!-- This is where the map will appear -->
+        <div id="map"></div>
+
+        <!-- Dashboard to show the numbers -->
+        <div class="dashboard">
+            <div class="stat-card">
+                <h3>Latitude</h3>
+                <span id="lat">Loading...</span> <!-- 'id' lets us change this text with JS -->
+            </div>
+            <div class="stat-card">
+                <h3>Longitude</h3>
+                <span id="long">Loading...</span>
+            </div>
+            <div class="stat-card">
+                <h3>Altitude</h3>
+                <span id="alt">Loading...</span> km
+            </div>
+            <div class="stat-card">
+                <h3>Speed</h3>
+                <span id="speed">Loading...</span> km/h
+            </div>
+        </div>
+
+        <!-- Educational Section -->
+        <section class="info-section">
+            <h2>What is the ISS?</h2>
+            <p>
+                The <strong>International Space Station (ISS)</strong> is a large spacecraft in orbit around Earth.
+                It serves as a home where crews of astronauts and cosmonauts live.
+                The space station is also a unique science laboratory.
+                Several nations worked together to build and use the space station.
+            </p>
+            <p>
+                <strong>Did you know?</strong> The ISS travels at about 28,000 kilometers per hour!
+                That means it orbits Earth roughly once every 90 minutes.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for Learning | Data from <a href="https://wheretheiss.at/" target="_blank">WhereTheISS.at</a></p>
+    </footer>
+
+    <!-- Link to our JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
